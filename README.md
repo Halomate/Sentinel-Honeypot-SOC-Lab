@@ -8,7 +8,6 @@ An intentionally exposed Windows virtual machine was deployed as a **honeypot** 
 
 # Lab Architecture
 
-![Architecture](screenshots/azure-architecture.png)
 
 The environment simulates a basic Security Operations Center workflow.
 
@@ -23,6 +22,8 @@ Log Analytics Workspace
 Microsoft Sentinel (SIEM)
 
 Attack attempts against the exposed VM are collected and analyzed through Sentinel.
+
+![Architecture](screenshots/azure-architecture.png)
 
 ---
 
