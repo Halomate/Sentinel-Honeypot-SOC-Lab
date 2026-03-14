@@ -1,1 +1,4 @@
-
+SecurityEvent
+| where EventID == 4625
+| summarize FailedAttempts = count() by IPAddress, Account, bin(TimeGenerated, 5m)
+| where FailedAttempts > 10
