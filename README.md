@@ -8,6 +8,8 @@ An intentionally exposed Windows virtual machine was deployed as a **honeypot** 
 
 # Lab Architecture
 
+![Architecture](screenshots/azure-architecture.png)
+
 The environment simulates a basic Security Operations Center workflow.
 
 Internet  
