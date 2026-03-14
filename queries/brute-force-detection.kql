@@ -1,3 +1,9 @@
+# Brute Force Detection Query
+
+This query identifies potential brute-force login attempts against the honeypot by detecting excessive failed login attempts within a short time window.
+
+Event ID 4625 represents failed Windows authentication attempts.
+
 SecurityEvent
 | where EventID == 4625
 | summarize FailedAttempts = count() by IPAddress, Account, bin(TimeGenerated, 5m)
