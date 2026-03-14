@@ -23,7 +23,7 @@ Microsoft Sentinel (SIEM)
 
 Attack attempts against the exposed VM are collected and analyzed through Sentinel.
 
-![Architecture](screenshots/azure-architecture.png)
+![NSG Rule](screenshots/network-security-group.png)
 
 ---
 
@@ -41,6 +41,8 @@ The following Azure resources were deployed:
 The VM firewall and network security group were intentionally opened to allow inbound traffic so attackers could discover and attempt to access the system.
 
 ![Environment](screenshots/vm-deployment.png)
+
+
 ---
 
 # Log Collection
