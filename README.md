@@ -35,7 +35,7 @@ The following Azure resources were deployed:
 - Log Analytics Workspace
 - Microsoft Sentinel SIEM
 
-The VM firewall and network security group were intentionally opened to allow inbound traffic so attackers could discover and attempt to access the system. :contentReference[oaicite:0]{index=0}
+The VM firewall and network security group were intentionally opened to allow inbound traffic so attackers could discover and attempt to access the system.
 
 ---
 
