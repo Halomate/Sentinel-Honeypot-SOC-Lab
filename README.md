@@ -66,5 +66,5 @@ Example query used to detect brute-force attempts:
 ```kql
 SecurityEvent
 | where EventID == 4625
-| summarize FailedAttempts = count() by IPAddress, Account, bin(TimeGenerated, 5m)
+| summarize FailedAttempts = count() by IpAddress, Account, bin(TimeGenerated, 5m)
 | where FailedAttempts > 10
