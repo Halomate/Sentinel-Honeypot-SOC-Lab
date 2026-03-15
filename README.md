@@ -68,3 +68,16 @@ SecurityEvent
 | where EventID == 4625
 | summarize FailedAttempts = count() by IpAddress, Account, bin(TimeGenerated, 5m)
 | where FailedAttempts > 10
+```
+
+---
+
+# Attack Visualization
+
+A Sentinel Workbook was created to visualize attack traffic.
+
+The workbook maps attacker IP addresses to geographic locations using an IP geolocation dataset and displays global attack activity on a map.
+
+This allows rapid visualization of where attack attempts originate.
+
+![Attack_Map](screenshots/sentinel-attack-map.png)
