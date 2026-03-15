@@ -109,6 +109,7 @@ Latitude and longitude
 Geographic location of attack attempts
 
 This enriched data allows security analysts to quickly visualize attack sources and identify patterns in global attack traffic.
+
 ---
 
 # Attack Visualization
