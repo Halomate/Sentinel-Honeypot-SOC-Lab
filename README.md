@@ -70,6 +70,45 @@ SecurityEvent
 | where FailedAttempts > 10
 ```
 
+# Log Enrichment and Attacker Geolocation
+
+After collecting authentication logs from the honeypot, the next step was to enrich the log data with geographic information to identify where attacks originate.
+
+By default, the SecurityEvent logs in Log Analytics Workspace only contain the attacker IP address and do not include location data.
+
+To resolve this, a GeoIP dataset was imported as a Microsoft Sentinel Watchlist. This dataset maps IP address ranges to geographic information such as country and coordinates.
+Once imported, the watchlist contains ~54,000 IP ranges with associated geographic data.
+
+In production environments, this type of location data is typically updated automatically by threat intelligence providers or security platforms.
+
+---
+
+# KQL Query for Log Enrichment
+
+The following KQL query correlates failed login attempts with the GeoIP dataset to identify attacker locations.
+
+```kql
+let GeoIPDB_FULL = _GetWatchlist("geoip");
+let WindowsEvents = SecurityEvent
+    | where EventID == 4625
+    | evaluate ipv4_lookup(GeoIPDB_FULL, IpAddress, network);
+WindowsEvents
+```
+---
+
+# Results
+
+After enriching the logs with the GeoIP dataset, Microsoft Sentinel can display:
+
+Attacker IP address
+
+Country of origin
+
+Latitude and longitude
+
+Geographic location of attack attempts
+
+This enriched data allows security analysts to quickly visualize attack sources and identify patterns in global attack traffic.
 ---
 
 # Attack Visualization
