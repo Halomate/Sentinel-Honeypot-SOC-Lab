@@ -1,4 +1,4 @@
-# Azure Sentinel SOC Honeypot Lab
+# 🍯 Azure Sentinel SOC Honeypot Lab
 
 This project demonstrates a cloud-based SOC lab built in **Microsoft Azure** using **Microsoft Sentinel SIEM**.  
 
@@ -6,7 +6,7 @@ An intentionally exposed Windows virtual machine was deployed as a **honeypot** 
 
 ---
 
-# Lab Architecture
+# 🏗️ Lab Architecture
 
 
 The environment simulates a basic Security Operations Center workflow.
@@ -27,7 +27,7 @@ Attack attempts against the exposed VM are collected and analyzed through Sentin
 
 ---
 
-# Environment Setup
+# ⚙️ Environment Setup
 
 The following Azure resources were deployed:
 
@@ -45,7 +45,7 @@ The VM firewall and network security group were intentionally opened to allow in
 
 ---
 
-# Log Collection
+# 📥 Log Collection
 
 Security event logs from the VM were forwarded using the **Azure Monitoring Agent** to the **Log Analytics Workspace**, which acts as the centralized log repository.
 
@@ -59,7 +59,7 @@ Event ID **4625** was used to identify failed authentication attempts against th
 
 ---
 
-# Threat Investigation with KQL
+# 🔎 Threat Investigation with KQL
 
 Example query used to detect brute-force attempts:
 
@@ -70,7 +70,7 @@ SecurityEvent
 | where FailedAttempts > 10
 ```
 
-# Log Enrichment and Attacker Geolocation
+# 🌍 Log Enrichment and Attacker Geolocation
 
 After collecting authentication logs from the honeypot, the next step was to enrich the log data with geographic information to identify where attacks originate.
 
@@ -83,7 +83,7 @@ In production environments, this type of location data is typically updated auto
 
 ---
 
-# KQL Query for Log Enrichment
+# 🧠 KQL Query for Log Enrichment
 
 The following KQL query correlates failed login attempts with the GeoIP dataset to identify attacker locations.
 
@@ -96,7 +96,7 @@ WindowsEvents
 ```
 ---
 
-# Results
+# 📊 Results
 
 After enriching the logs with the GeoIP dataset, Microsoft Sentinel can display:
 
@@ -112,7 +112,7 @@ This enriched data allows security analysts to quickly visualize attack sources 
 
 ---
 
-# Attack Visualization
+# 🗺️ Attack Visualization
 
 A Sentinel Workbook was created to visualize attack traffic.
 
