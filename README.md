@@ -121,3 +121,21 @@ The workbook maps attacker IP addresses to geographic locations using an IP geol
 This allows rapid visualization of where attack attempts originate.
 
 ![Attack_Map](screenshots/sentinel-attack-map.png)
+
+---
+
+# 🔒 Next Steps: Threat Remediation & Hardening
+
+While this lab focused on detecting and visualizing real-world attack traffic using a honeypot, the next phase builds on these findings by shifting from detection to defense.
+
+In Part II: Threat Remediation & Hardening Lab, I take the identified attack patterns and:
+
+Implement security controls to mitigate observed threats
+
+Harden system configurations to reduce attack surface
+
+Apply best practices aligned with real-world SOC and blue team operations
+
+This progression demonstrates a full security lifecycle approach — from visibility and detection to response and prevention.
+
+👉 Continue to: [Threat Remediation & Hardening Lab (Part II)](https://github.com/Halomate/Azure-SOC-Threat-Remediation)
