@@ -130,11 +130,11 @@ While this lab focused on detecting and visualizing real-world attack traffic us
 
 In Part II: Threat Remediation & Hardening Lab, I take the identified attack patterns and:
 
-Implement security controls to mitigate observed threats
+**1.** Implement security controls to mitigate observed threats
 
-Harden system configurations to reduce attack surface
+**2.** Harden system configurations to reduce attack surface
 
-Apply best practices aligned with real-world SOC and blue team operations
+**3.** Apply best practices aligned with real-world SOC and blue team operations
 
 This progression demonstrates a full security lifecycle approach — from visibility and detection to response and prevention.
 
